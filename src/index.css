@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.input-label {
+    @apply absolute top-1/2 left-3 transform -translate-y-1/2 transition-all duration-200 ease-out pointer-events-none text-[#4d4d4d];
+}
+
+.input-field:focus+.input-label,
+.input-field:not(:placeholder-shown)+.input-label {
+    @apply top-0 left-3 transform -translate-y-full text-xs text-teal-500;
+}
+
+.active {
+    @apply font-extrabold bg-[#1abc9c] p-2 text-white rounded-lg outline-none hover:text-white !important
+}
